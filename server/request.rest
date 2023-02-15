@@ -1,0 +1,34 @@
+GET http://localhost:3001/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2ViNGQzZTE3YzRhMWFkNTM2MGE0MDMiLCJpYXQiOjE2NzY0NDkyMDMsImV4cCI6MTY3NjQ1MTAwM30.dX_bina16Ek8DaN6eOnHmpfMtBdOdneDHtSyzMq68zo
+
+###
+POST http://localhost:3001/signup
+Content-Type:application/json
+
+{
+    "email": "gagan@gmail.com",
+    "password": "123456789"
+}
+
+###
+POST http://localhost:3001/signin
+Content-Type:application/json
+
+{
+    "email": "gagan@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost:3001/transaction
+Content-Type:application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2ViNGQzZTE3YzRhMWFkNTM2MGE0MDMiLCJpYXQiOjE2NzY0NDkyMDMsImV4cCI6MTY3NjQ1MTAwM30.dX_bina16Ek8DaN6eOnHmpfMtBdOdneDHtSyzMq68zo
+
+{
+    "amount": "100",
+    "transactionType": "withdraw"
+}
+
+###
+GET http://localhost:3001/get-user-data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2ViNGQzZTE3YzRhMWFkNTM2MGE0MDMiLCJpYXQiOjE2NzY0NDkyMDMsImV4cCI6MTY3NjQ1MTAwM30.dX_bina16Ek8DaN6eOnHmpfMtBdOdneDHtSyzMq68zo

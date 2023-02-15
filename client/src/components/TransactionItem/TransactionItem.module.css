@@ -1,0 +1,14 @@
+.transactionItem {
+    border-bottom: 1px solid grey;
+}
+
+.transactionItem td {
+    font-size: 0.9rem;
+    padding: 10px;
+    white-space: nowrap;
+    border-right: 1px solid grey;
+}
+
+.transactionItem td:last-of-type {
+    border-right: none;
+}

@@ -1,0 +1,10 @@
+.dashboard {
+    min-height: 100vh;
+    position: relative;
+}
+
+.logout {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}

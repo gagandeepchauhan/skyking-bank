@@ -1,0 +1,33 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.modal {
+    margin-top: 100px;
+    padding: 20px;
+    border: var(--primary-border);
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+}
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 18px;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 5px;
+}
+
+/* .modalContent {} */

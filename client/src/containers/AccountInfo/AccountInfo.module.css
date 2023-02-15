@@ -1,0 +1,37 @@
+.headOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.actions button:nth-of-type(2) {
+    margin-left: 10px;
+}
+
+.balance {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.abbreviation {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.email {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.time {
+    font-size: 0.9rem;
+    color: grey;
+    margin: 20px 0;
+}

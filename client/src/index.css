@@ -1,0 +1,104 @@
+:root {
+  --dark-text-color: #fff;
+  --dark-bg-color: #000;
+  --dark-link-color: rgb(22, 204, 71);
+  --dark-border: 1px solid #fff;
+  --dark-btn-border: 2px solid #fff;
+  --dark-btn-bg-color: #000;
+  --dark-btn-text-color: #fff;
+
+  --light-border: 1px solid #000;
+  --light-text-color: #000;
+  --light-bg-color: #fff;
+  --light-link-color: rgb(23, 189, 68);
+  --light-btn-border: 2px solid rgb(197, 197, 197);
+  --light-btn-bg-color: rgb(197, 197, 197);
+  --light-btn-text-color: #000;
+
+  --primary-text-color: var(--dark-text-color);
+  --primary-bg-color: var(--dark-bg-color);
+  --primary-link-color: var(--dark-link-color);
+  --primary-border: var(--dark-border);
+  --primary-btn-border: var(--dark-btn-border);
+  --primary-btn-text-color: var(--dark-btn-text-color);
+  --primary-btn-bg-color: var(--dark-btn-bg-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  white-space: nowrap;
+}
+
+input {
+  outline: none;
+}
+
+.sky-btn {
+  border: var(--primary-btn-border);
+  /* background-color: var(--primary-btn-bg-color); */
+  /* color: var(--primary-btn-text-color); */
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.6rem;
+}
+
+.sky-round-btn {
+  border: var(--primary-btn-border);
+  /* background-color: var(--primary-btn-bg-color); */
+  /* color: var(--primary-btn-text-color); */
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 16px;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sky-input {
+  padding: 10px;
+  margin-bottom: 1rem;
+  /* background-color: var(--primary-bg-color); */
+  border: var(--primary-border);
+  border-width: 0.8px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+  /* color: var(--primary-text-color); */
+}
+
+.sky-link {
+  color: var(--primary-link-color);
+  font-size: 1rem;
+  margin: 10px 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.sky-error {
+  color: red;
+  font-size: 1rem;
+  display: block;
+}
+
+.sky-success {
+  color: var(--primary-link-color);
+  font-size: 1rem;
+  display: block;
+}
+
+.light-text {
+  display: block;
+  font-size: 14px;
+  color: grey;
+}

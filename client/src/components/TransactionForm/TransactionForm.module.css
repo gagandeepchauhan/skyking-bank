@@ -1,0 +1,13 @@
+.formContainer {
+    padding: 20px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.formContainer form {
+    margin-top: 20px;
+}
