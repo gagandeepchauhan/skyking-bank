@@ -1,0 +1,9 @@
+.pnfScreen {
+    min-height: 100vh;
+    position: relative;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}

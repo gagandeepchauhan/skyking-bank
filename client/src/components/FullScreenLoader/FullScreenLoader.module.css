@@ -9,3 +9,8 @@
     font-size: 2rem;
     font-weight: bolder;
 }
+
+.loader {
+    height: 3rem;
+    width: 3rem;
+}

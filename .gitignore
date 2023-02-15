@@ -6,3 +6,7 @@ server/.env
 
 client/build
 .DS_Store
+client/.firebaserc
+client/firebase.json
+client/.firebase
+client/.gitignore
