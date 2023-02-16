@@ -34,7 +34,7 @@ const signup = dispatch => async ({ email, password }, success, error) => {
         });
         if (success) success();
     } catch (err) {
-        console.log(err);
+        // console.log(err);
         dispatch({
             type: "add_error",
             payload: err?.response?.data?.error || "Something went wrong"
@@ -59,7 +59,7 @@ const signin = dispatch => async ({ email, password }, success, error) => {
         });
         if (success) success();
     } catch (err) {
-        console.log(err);
+        // console.log(err);
         dispatch({
             type: "add_error",
             payload: err?.response?.data?.error || "Something went wrong"
@@ -91,7 +91,7 @@ const tryLocalSignin = dispatch => async (callback) => {
             });
         }
     } catch (err) {
-        console.log("ERROR IN GETTING LOCALSTORAGE DATA", err);
+        // console.log("ERROR IN GETTING LOCALSTORAGE DATA", err);
     } finally {
         if (callback) callback();
     }
@@ -99,7 +99,12 @@ const tryLocalSignin = dispatch => async (callback) => {
 
 const addAnimTimestamp = dispatch => (callback) => {
     const ts = new Date().getTime();
-    const data = JSON.parse(localStorage.getItem("skyking-bank") || '{}');
+    let data = {}
+    try {
+        data = JSON.parse(localStorage.getItem("skyking-bank") || '{}');
+    } catch (e) {
+        data = {};
+    }
     data.animTimestamp = ts;
     localStorage.setItem('skyking-bank', JSON.stringify(data));
     dispatch({
@@ -109,10 +114,19 @@ const addAnimTimestamp = dispatch => (callback) => {
     if (callback) callback();
 }
 
+const getAnimTimestamp = () => {
+    try {
+        const data = JSON.parse(localStorage.getItem("skyking-bank") || '{}');
+        return data.animTimestamp;
+    } catch (e) {
+        return null;
+    }
+}
+
 const initialValue = {
     token: null,
     errorMessage: '',
-    animTimestamp: null
+    animTimestamp: getAnimTimestamp()
 }
 
 export const { Context, Provider } = createDataContext(

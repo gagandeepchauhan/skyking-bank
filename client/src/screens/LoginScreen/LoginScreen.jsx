@@ -5,6 +5,7 @@ import Login from '../../containers/Login';
 import Signup from '../../containers/Signup';
 import styles from "./LoginScreenStyle.module.css";
 import { Context as AuthContext } from '../../contexts/AuthContext';
+import CustomAnimation from '../../components/CustomAnimation';
 
 const Images = ['/assets/images/image1.jpg', '/assets/images/image2.jpg', '/assets/images/image3.jpg', '/assets/images/image4.jpg', '/assets/images/image5.jpg'];
 const Template = {
@@ -13,8 +14,17 @@ const Template = {
 };
 
 const LoginScreen = () => {
-    const { clearErrorMessage } = useContext(AuthContext);
+    const { clearErrorMessage, state: { animTimestamp } } = useContext(AuthContext);
     const [template, setTemplate] = useState(null);
+
+    const showAnimation = useMemo(() => {
+        let currentTs = new Date().getTime();
+        if (!animTimestamp) return true;
+        if (currentTs > (animTimestamp + 30 * 60 * 1000)) {
+            return true;
+        }
+        return false;
+    }, [animTimestamp]);
 
     const imageSrc = useMemo(() => {
         return Images[Math.floor(Math.random() * Images.length)];
@@ -64,6 +74,10 @@ const LoginScreen = () => {
             case Template.signup: return <Signup goToLogin={goToLogin} goBack={goBack} />
             default: return <DefaultTemplate />
         }
+    }
+
+    if (showAnimation) {
+        return <CustomAnimation />
     }
 
     return (

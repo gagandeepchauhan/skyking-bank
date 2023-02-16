@@ -20,7 +20,6 @@ function App() {
               element={
                 <ResolveRoute compliment={true} component={LoginScreen} />
               }
-              compliment={true}
             />
             <Route
               path='/dashboard'
