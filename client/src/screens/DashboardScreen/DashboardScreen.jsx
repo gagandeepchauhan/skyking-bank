@@ -28,10 +28,10 @@ const DashboardScreen = () => {
     const fetchUser = useCallback(() => {
         setLoading(true);
         fetchUserData((status) => {
-            if (status === 401) {
-                logout();
-            } else {
+            if (status === 200) {
                 setLoading(false);
+            } else {
+                logout();
             }
         })
     }, [fetchUserData]);

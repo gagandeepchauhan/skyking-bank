@@ -18,17 +18,17 @@ const AccountScreen = () => {
     const fetchAccount = useCallback(() => {
         setLoading(true);
         fetchAccountData(userId, (status) => {
-            if (status === 401) {
-                signout();
-                reset();
-                navigate('/');
+            if (status === 200) {
+                setLoading(false);
             }
             else if (status === 403) {
                 reset();
                 navigate('/dashboard');
             }
             else {
-                setLoading(false);
+                signout();
+                reset();
+                navigate('/');
             }
         })
     }, [fetchAccountData, userId]);
