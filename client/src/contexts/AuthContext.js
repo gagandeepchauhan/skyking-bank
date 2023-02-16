@@ -12,7 +12,7 @@ const authReducer = (state, action) => {
         case "clear_error_message":
             return { ...state, errorMessage: '' };
         case "signout":
-            return { errorMessage: '', token: null, animTimestamp: null };
+            return { ...state, errorMessage: '', token: null };
         default:
             return state;
     }
@@ -69,7 +69,13 @@ const signin = dispatch => async ({ email, password }, success, error) => {
 };
 
 const signout = dispatch => async (callback) => {
-    localStorage.removeItem("skyking-bank");
+    try {
+        const data = JSON.parse(localStorage.getItem("skyking-bank") || '{}');
+        delete data?.token;
+        localStorage.setItem('skyking-bank', JSON.stringify(data));
+    } catch (e) {
+        localStorage.removeItem('skyking-bank');
+    }
     dispatch({
         type: "signout"
     });
