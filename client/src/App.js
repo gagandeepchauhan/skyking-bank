@@ -8,11 +8,13 @@ import DashboardScreen from './screens/DashboardScreen';
 import AccountScreen from './screens/AccountScreen';
 import PageNotFoundScreen from './screens/PageNotFoundScreen';
 import ResolveRoute from './ResolveRoute';
+import ThemeSelector from './components/ThemeSelector';
 
 function App() {
   return (
     <AuthProvider>
       <UserDataProvider>
+        <ThemeSelector />
         <Router>
           <Routes>
             <Route

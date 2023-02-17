@@ -62,7 +62,7 @@ const DashboardScreen = () => {
                 onClick={logout}
             >
                 <button className='sky-round-btn'>
-                    -&gt;
+                    <i className="fa-solid fa-right-from-bracket"></i>
                 </button>
             </div>
             {getView()}

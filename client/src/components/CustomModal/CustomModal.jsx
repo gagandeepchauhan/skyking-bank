@@ -16,7 +16,7 @@ const CustomModal = ({
                     className={styles.close}
                     onClick={onHide}
                 >
-                    x
+                    <i className="fa-solid fa-x"></i>
                 </div>
                 <div className={styles.modalContent}>
                     {children}

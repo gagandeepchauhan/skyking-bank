@@ -22,6 +22,14 @@
   --primary-btn-border: var(--dark-btn-border);
   --primary-btn-text-color: var(--dark-btn-text-color);
   --primary-btn-bg-color: var(--dark-btn-bg-color);
+
+  /* --primary-text-color: var(--light-text-color);
+  --primary-bg-color: var(--light-bg-color);
+  --primary-link-color: var(--light-link-color);
+  --primary-border: var(--light-border);
+  --primary-btn-border: var(--light-btn-border);
+  --primary-btn-text-color: var(--light-btn-text-color);
+  --primary-btn-bg-color: var(--light-btn-bg-color); */
 }
 
 * {

@@ -31,7 +31,7 @@ const LoginScreen = () => {
     }, []);
 
     const DefaultTemplate = () => (
-        <>
+        <div className='d-flex justify-content-center align-items-center flex-column'>
             <div className={`${styles.image}`}>
                 <img
                     src={imageSrc}
@@ -52,7 +52,7 @@ const LoginScreen = () => {
                     Register
                 </button>
             </div>
-        </>
+        </div>
     )
 
     const goToSignup = () => {

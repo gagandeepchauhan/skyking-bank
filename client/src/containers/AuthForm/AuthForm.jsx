@@ -34,7 +34,7 @@ const AuthForm = ({
                     className='sky-round-btn mb-4'
                     onClick={goBack}
                 >
-                    &lt;
+                    <i className="fa-solid fa-chevron-left"></i>
                 </button>
                 {title}
             </div>
@@ -61,10 +61,10 @@ const AuthForm = ({
                     disabled={loading}
                 >
                     {loading
-                        ? <div className="spinner-border spinner-border-sm text-light" role="status">
+                        ? <div className="spinner-border spinner-border-sm" style={{ color: 'var(--primary-text-color)' }} role="status">
                             <span className="sr-only"></span>
                         </div>
-                        : <>&gt;</>
+                        : <i className="fa-solid fa-chevron-right"></i>
                     }
                 </button>
             </form>
@@ -76,6 +76,8 @@ const AuthForm = ({
             </span>
             {errorMessage &&
                 <span className='sky-error'>
+                    <i className="sky-error fa-solid fa-circle-exclamation"></i>
+                    &nbsp;
                     {errorMessage}
                 </span>
             }

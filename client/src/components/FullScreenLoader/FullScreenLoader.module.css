@@ -13,4 +13,5 @@
 .loader {
     height: 3rem;
     width: 3rem;
+    color: var(--primary-text-color);
 }

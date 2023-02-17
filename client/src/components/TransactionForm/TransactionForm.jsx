@@ -53,15 +53,17 @@ const TransactionForm = ({
                     disabled={loading}
                 >
                     {loading
-                        ? <div className="spinner-border spinner-border-sm text-light" role="status">
+                        ? <div className="spinner-border spinner-border-sm" style={{ color: 'var(--primary-text-color)' }} role="status">
                             <span className="sr-only"></span>
                         </div>
-                        : <>&gt;</>
+                        : <i className="fa-solid fa-chevron-right"></i>
                     }
                 </button>
             </form>
             {error &&
                 <span className='sky-error mt-3'>
+                    <i className="sky-error fa-solid fa-circle-exclamation"></i>
+                    &nbsp;
                     {error}
                 </span>
             }

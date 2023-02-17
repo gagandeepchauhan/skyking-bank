@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Skyking Bank",
+  "name": "Simple bank demonstration, soon becoming a crypto currency",
   "icons": [
     {
       "src": "favicon.ico",
